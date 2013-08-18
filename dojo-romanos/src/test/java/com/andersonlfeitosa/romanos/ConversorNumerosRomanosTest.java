@@ -26,6 +26,9 @@ public class ConversorNumerosRomanosTest {
 
 		// verifica conversao valor 0, neste caso null
 		Assert.assertNull(ConversorNumerosRomanos.converter(0));
+
+		// verifica conversao valor 4000, neste caso null
+		Assert.assertNull(ConversorNumerosRomanos.converter(4000));
 		
 		/*
 		 * Algarismos romanos
@@ -120,8 +123,8 @@ public class ConversorNumerosRomanosTest {
 		// verifica coversao de 2751
 		Assert.assertEquals("MMDCCLI", ConversorNumerosRomanos.converter(2751));
 		
-		// verifica coversao de 5000
-		Assert.assertEquals("MMMMM", ConversorNumerosRomanos.converter(5000));
+		// verifica coversao de 3999
+		Assert.assertEquals("MMMCMXCIX", ConversorNumerosRomanos.converter(3999));
 
 		// verifica coversao de 999
 		Assert.assertEquals("CMXCIX", ConversorNumerosRomanos.converter(999));

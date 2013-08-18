@@ -13,7 +13,7 @@ public class ConversorNumerosRomanos {
 	/**
 	 * Metodo que converte o numero especificado para o sistema de numeracao romano.
 	 * Esse metodo retornara <code>null</code> quando o numero especificado for 
-	 * menor ou igual a zero.
+	 * menor ou igual a zero e maior igual a 4000.
 	 * 
 	 * @param numero O inteiro positivo maior que zero a ser convertido para algarismos romanos.
 	 * @return O numero especificado representado por algarismos romanos.
@@ -21,7 +21,7 @@ public class ConversorNumerosRomanos {
 	public static String converter(Integer numero) {
 		String romanos = null;
 		
-		if (numero != null && numero > 0) {
+		if (numero != null && numero > 0 && numero < 4000) {
 			romanos = converterParaRomanos(numero);
 		}
 		
@@ -30,7 +30,7 @@ public class ConversorNumerosRomanos {
 
 	/*
 	 * Metodo que realiza a conversao para algarismos romanos.
-	 * Esse metodo assume que o numero passado eh positivo e maior que zero.
+	 * Esse metodo assume que o numero passado eh positivo, maior que zero e menor que 4000.
 	 * 
 	 * @param numero O numero a ser convertido. 
 	 * @return O numero especificado representado por algarismos romanos.
