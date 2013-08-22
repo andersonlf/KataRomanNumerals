@@ -36,29 +36,17 @@ public class ConversorNumerosRomanos {
 	 * @return O numero especificado representado por algarismos romanos.
 	 */
 	private static String converterParaRomanos(Integer numero) {
-		int resultado = 0;
 		int resto = 0;
-		
-		/*
-		 * Verifica se nao eh um numero cheio
-		 */
-		for (AlgarismosRomanos algarismo: AlgarismosRomanos.values()) {
-			if (algarismo.getValor() == numero) {
-				return algarismo.name();
-			}
-		}
 		
 		/*
 		 * Verifica se eh maior que um dos valores cheios obtem o resto e reprocessa-o
 		 */
 		for (AlgarismosRomanos algarismo: AlgarismosRomanos.values()) {
-			if (algarismo.equals(AlgarismosRomanos.M) && numero > algarismo.getValor()) {
-				resultado = numero / algarismo.getValor();
-				resto = numero % algarismo.getValor();
-				return repetirAlgarismos(algarismo.name(), resultado) + converterParaRomanos(resto);
-			} else if (numero > algarismo.getValor()) {
+			if (numero > algarismo.getValor()) {
 				resto = numero - algarismo.getValor();
 				return algarismo.name() + converterParaRomanos(resto);
+			} else if (algarismo.getValor() == numero) {
+				return algarismo.name();
 			}
 		}
 		

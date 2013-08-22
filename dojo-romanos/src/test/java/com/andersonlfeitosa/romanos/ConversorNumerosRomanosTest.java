@@ -30,6 +30,9 @@ public class ConversorNumerosRomanosTest {
 		// verifica conversao valor 4000, neste caso null
 		Assert.assertNull(ConversorNumerosRomanos.converter(4000));
 		
+		// verifica conversao valor 4001, neste caso null
+		Assert.assertNull(ConversorNumerosRomanos.converter(4001));
+		
 		/*
 		 * Algarismos romanos
 		 */
